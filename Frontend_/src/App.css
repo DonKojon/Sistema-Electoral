@@ -40,3 +40,31 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Eliminar todas las barras de desplazamiento del sidebar */
+.MuiDrawer-paper {
+  overflow: hidden !important;
+}
+
+.MuiDrawer-paper::-webkit-scrollbar {
+  display: none !important;
+}
+
+.MuiDrawer-paper *::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Asegurar que el contenido del sidebar no cause desplazamiento */
+.MuiDrawer-paper .MuiList-root {
+  overflow: hidden !important;
+}
+
+.MuiDrawer-paper .MuiBox-root {
+  overflow: hidden !important;
+}
+
+/* Ocultar barras de desplazamiento en todos los navegadores */
+.MuiDrawer-paper {
+  -ms-overflow-style: none !important;  /* Internet Explorer 10+ */
+  scrollbar-width: none !important;  /* Firefox */
+}
